@@ -56,9 +56,6 @@ body::before {
   z-index: 0;
 }
 
-/* ═══════════════════════════════════════════
-   VIEWS — two screens, toggled via JS
-═══════════════════════════════════════════ */
 .view {
   display: none;
   position: relative;
@@ -67,9 +64,6 @@ body::before {
 }
 .view.active { display: flex; flex-direction: column; }
 
-/* ═══════════════════════════════════════════
-   DASHBOARD VIEW
-═══════════════════════════════════════════ */
 #dashView {
   max-width: 560px;
   margin: 0 auto;
@@ -78,7 +72,6 @@ body::before {
   width: 100%;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -113,7 +106,6 @@ header {
 .icon-btn:hover { border-color: var(--border2); color: var(--text); background: var(--surface2); }
 .icon-btn.active { color: var(--focus); border-color: var(--focus); background: var(--focus-soft); }
 
-/* Quick Stats Row */
 .quick-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,7 +135,6 @@ header {
   margin-top: 5px;
 }
 
-/* ─── TASK INPUT SECTION ─── */
 .task-section {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -225,7 +216,6 @@ header {
 .add-btn:hover { opacity: 0.85; }
 .add-btn:active { transform: scale(0.97); }
 
-/* ─── TASK LIST ─── */
 .tasks-header {
   display: flex;
   align-items: center;
@@ -259,7 +249,6 @@ header {
 .task-card:hover { border-color: var(--border2); transform: translateY(-1px); }
 .task-card.complete-card { opacity: 0.55; }
 
-/* Left accent bar */
 .task-card-accent {
   width: 3px;
   align-self: stretch;
@@ -355,7 +344,6 @@ header {
   letter-spacing: 0.3px;
 }
 
-/* Right side: adjust & delete */
 .task-card-actions {
   display: flex;
   align-items: center;
@@ -398,7 +386,6 @@ header {
 }
 .task-del:hover { color: #e05555; background: rgba(224,85,85,0.08); }
 
-/* Start session button inside card */
 .task-start-btn {
   display: flex;
   align-items: center;
@@ -429,7 +416,6 @@ header {
 }
 .empty-tasks .empty-icon { font-size: 28px; margin-bottom: 8px; }
 
-/* ─── SETTINGS / STATS PANELS ─── */
 .collapsible-panel {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -488,7 +474,6 @@ header {
 .toggle input:checked + .toggle-slider { background: var(--focus); }
 .toggle input:checked + .toggle-slider::before { transform: translateX(18px); background: white; }
 
-/* Alarm */
 .alarm-builtin { display: flex; gap: 6px; flex-wrap: wrap; }
 .builtin-btn {
   padding: 7px 12px;
@@ -539,7 +524,6 @@ header {
 }
 .alarm-preview-btn:hover, .alarm-remove-btn:hover { opacity: 0.7; }
 
-/* Stats panel */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -575,9 +559,6 @@ header {
 .bar-fill { height: 100%; background: var(--focus); border-radius: 3px; transition: width 0.6s ease; }
 .bar-val { font-size: 11px; color: var(--muted); font-family: 'JetBrains Mono', monospace; min-width: 20px; text-align: right; }
 
-/* ═══════════════════════════════════════════
-   TASK SESSION VIEW
-═══════════════════════════════════════════ */
 #sessionView {
   max-width: 560px;
   margin: 0 auto;
@@ -586,7 +567,6 @@ header {
   width: 100%;
 }
 
-/* Back button */
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -606,7 +586,6 @@ header {
 .back-btn:hover { color: var(--text); border-color: var(--border2); background: var(--surface2); }
 .back-btn svg { width: 14px; height: 14px; }
 
-/* Task heading block */
 .session-header {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -683,7 +662,6 @@ header {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* MODE TABS — inside session */
 .mode-tabs {
   display: flex;
   background: var(--surface);
@@ -713,7 +691,6 @@ header {
 .mode-tab.active[data-mode="short"] { background: var(--short); color: white; }
 .mode-tab.active[data-mode="long"] { background: var(--long); color: white; }
 
-/* TIMER CARD */
 .timer-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -735,7 +712,6 @@ header {
 }
 .session-round-label span { color: var(--focus); }
 
-/* Ring */
 .ring-wrap { position: relative; width: 240px; height: 240px; }
 .ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .ring-bg { fill: none; stroke: var(--surface3); stroke-width: 8; }
@@ -762,7 +738,6 @@ header {
   letter-spacing: 1px; font-weight: 600;
 }
 
-/* Duration editor */
 .duration-editor {
   display: flex;
   align-items: center;
@@ -801,7 +776,6 @@ header {
 .dur-input::-webkit-inner-spin-button { -webkit-appearance: none; }
 .dur-unit { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; }
 
-/* Controls */
 .timer-controls { display: flex; align-items: center; gap: 14px; }
 
 .ctrl-btn {
@@ -838,7 +812,6 @@ header {
 .play-btn:hover { transform: scale(1.05); }
 .play-btn:active { transform: scale(0.97); }
 
-/* Session dots */
 .session-dots { display: flex; gap: 8px; align-items: center; }
 .dot {
   width: 8px; height: 8px;
@@ -849,7 +822,6 @@ header {
 .dot.done { background: var(--focus); }
 .dot.current { background: var(--focus); transform: scale(1.3); opacity: 0.6; }
 
-/* ─── TOAST ─── */
 .toast-wrap {
   position: fixed;
   bottom: 24px;
@@ -881,7 +853,6 @@ header {
   to { opacity: 0; transform: translateY(10px); }
 }
 
-/* Responsive */
 @media (max-width: 420px) {
   #dashView, #sessionView { padding: 16px 14px 32px; }
   .time-display { font-size: 46px; }
@@ -891,10 +862,8 @@ header {
   .session-task-name { font-size: 18px; }
 }
 
-/* alarm section */
 .alarm-section { display: flex; flex-direction: column; gap: 8px; }
 
-/* Reset DB button */
 .reset-db-btn {
   font-size: 11px; font-weight: 600; letter-spacing: 0.3px;
   padding: 6px 12px; border-radius: var(--radius-xs);
@@ -904,7 +873,6 @@ header {
 }
 .reset-db-btn:hover { background: rgba(224,85,85,0.18); border-color: #e05555; }
 
-/* Confirm reset modal */
 .reset-modal {
   display: none; position: fixed; inset: 0;
   background: rgba(13,13,15,.9); z-index: 9999;
@@ -929,7 +897,6 @@ header {
 .reset-confirm { background: #e05555; border: none; color: white; }
 .reset-confirm:hover { opacity: 0.85; }
 
-/* ─── BUFFER OVERLAY ─── */
 .buffer-overlay {
   display: none;
   position: absolute;
@@ -999,7 +966,6 @@ header {
 </head>
 <body>
 
-<!-- ═══════════════════ DASHBOARD VIEW ═══════════════════ -->
 <div class="view active" id="dashView">
 
   <header>
@@ -1021,7 +987,6 @@ header {
     </div>
   </header>
 
-  <!-- Quick stats -->
   <div class="quick-stats">
     <div class="qs-card">
       <div class="qs-val" id="statToday">0</div>
@@ -1037,7 +1002,6 @@ header {
     </div>
   </div>
 
-  <!-- Task add section -->
   <div class="task-section">
     <div class="section-title">📝 Add Task</div>
     <div class="task-input-row">
@@ -1050,7 +1014,6 @@ header {
       <button class="add-btn" onclick="addTask()">+ Add</button>
     </div>
 
-    <!-- Task list lives inside same card -->
     <div class="tasks-header">
       <div class="section-title">📋 Tasks</div>
       <div class="task-count" id="taskCountLabel"></div>
@@ -1058,7 +1021,6 @@ header {
     <div class="task-list" id="taskList"></div>
   </div>
 
-  <!-- Settings Panel -->
   <div class="collapsible-panel" id="settingsPanel">
     <div class="section-title">⚙️ Settings</div>
     <div class="settings-grid">
@@ -1113,14 +1075,12 @@ header {
     </div>
   </div>
 
-  <!-- Stats Panel -->
   <div class="collapsible-panel" id="statsSection">
     <div style="display:flex;align-items:center;justify-content:space-between;">
       <div class="section-title">📊 Statistics</div>
       <button class="reset-db-btn" onclick="confirmResetDB()" title="Reset all data">🗑 Reset Data</button>
     </div>
 
-    <!-- Top KPI row -->
     <div class="stats-grid" style="grid-template-columns:repeat(4,1fr)">
       <div class="stat-card"><div class="stat-val" id="statTodayFull">0</div><div class="stat-lbl">TODAY</div></div>
       <div class="stat-card"><div class="stat-val" id="statWeekFull">0</div><div class="stat-lbl">THIS WEEK</div></div>
@@ -1128,14 +1088,12 @@ header {
       <div class="stat-card"><div class="stat-val" id="statStreak" style="color:var(--focus)">0🔥</div><div class="stat-lbl">STREAK</div></div>
     </div>
 
-    <!-- Time breakdown KPIs -->
     <div class="stats-grid" style="grid-template-columns:repeat(3,1fr)">
       <div class="stat-card"><div class="stat-val" id="statFocusHrs" style="font-size:18px">0h 0m</div><div class="stat-lbl">FOCUS TIME</div></div>
       <div class="stat-card"><div class="stat-val" id="statBreakHrs" style="font-size:18px">0h 0m</div><div class="stat-lbl">BREAK TIME</div></div>
       <div class="stat-card"><div class="stat-val" id="statIdleHrs" style="font-size:18px">0h 0m</div><div class="stat-lbl">IDLE TIME</div></div>
     </div>
 
-    <!-- Donut Chart: time distribution -->
     <div class="focus-bar-wrap">
       <div class="focus-bar-title">Today's Time Distribution</div>
       <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
@@ -1144,25 +1102,21 @@ header {
       </div>
     </div>
 
-    <!-- 7-day bar chart -->
     <div class="focus-bar-wrap">
       <div class="focus-bar-title">Focus Pomodoros — Last 7 Days</div>
       <div id="weekBars"></div>
     </div>
 
-    <!-- 7-day stacked mini chart -->
     <div class="focus-bar-wrap">
       <div class="focus-bar-title">Daily Breakdown — Last 7 Days</div>
       <canvas id="stackedCanvas" width="100%" height="140" style="width:100%"></canvas>
     </div>
 
-    <!-- Tasks done + avg -->
     <div class="stats-grid" style="grid-template-columns:1fr 1fr">
       <div class="stat-card"><div class="stat-val" id="taskDoneStat">0</div><div class="stat-lbl">TASKS DONE</div></div>
       <div class="stat-card"><div class="stat-val" id="statAvgDaily" style="font-size:18px">—</div><div class="stat-lbl">AVG / DAY</div></div>
     </div>
 
-    <!-- Personal best -->
     <div class="stat-card" style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;">
       <div>
         <div class="stat-lbl">PERSONAL BEST DAY</div>
@@ -1173,10 +1127,8 @@ header {
   </div>
 
 </div>
-<!-- END DASHBOARD -->
 
 
-<!-- ═══════════════════ SESSION VIEW ═══════════════════ -->
 <div class="view" id="sessionView">
 
   <button class="back-btn" onclick="leaveSession()">
@@ -1186,7 +1138,6 @@ header {
     All Tasks
   </button>
 
-  <!-- Task heading -->
   <div class="session-header">
     <div class="session-task-label">Current Task</div>
     <div class="session-task-name" id="sessionTaskName">—</div>
@@ -1196,17 +1147,14 @@ header {
     </div>
   </div>
 
-  <!-- Mode tabs -->
   <div class="mode-tabs" role="tablist">
     <button class="mode-tab active" data-mode="focus" onclick="setMode('focus')" role="tab">🍅 Focus</button>
     <button class="mode-tab" data-mode="short" onclick="setMode('short')" role="tab">☕ Short Break</button>
     <button class="mode-tab" data-mode="long" onclick="setMode('long')" role="tab">🌿 Long Break</button>
   </div>
 
-  <!-- Timer card -->
   <div class="timer-card" style="position:relative;">
 
-    <!-- Buffer overlay: shown between sessions -->
     <div class="buffer-overlay" id="bufferOverlay">
       <div class="buffer-mode-badge" id="bufferBadge">Short Break</div>
       <div class="buffer-label" id="bufferLabel">Starting short break in</div>
@@ -1254,7 +1202,6 @@ header {
   </div>
 
 </div>
-<!-- END SESSION -->
 
 
 <div id="alarmModal" style="display:none;position:fixed;inset:0;background:rgba(13,13,15,.96);z-index:9999;align-items:center;justify-content:center;flex-direction:column;gap:20px;">
@@ -1263,7 +1210,6 @@ header {
   <button onclick="stopAlarmAndContinue()" style="padding:16px 36px;font-size:18px;font-weight:700;border:none;border-radius:12px;background:#e85d3a;color:white;cursor:pointer;">STOP ALARM</button>
 </div>
 
-<!-- RESET MODAL -->
 <div class="reset-modal" id="resetModal">
   <div class="reset-modal-box">
     <div style="font-size:36px">🗑️</div>
@@ -1276,33 +1222,25 @@ header {
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
-// ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const MODES = {
   focus: { label: 'Focus',       color: '#e85d3a', def: 25 },
   short: { label: 'Short Break', color: '#3ab87a', def: 5  },
   long:  { label: 'Long Break',  color: '#5b8fe8', def: 30 }
 };
 
-// ─── STATE ────────────────────────────────────────────────────────────────────
 let state = {
-  // Timer
   mode: 'focus',
   running: false,
   elapsed: 0,
   totalSecs: 25 * 60,
   completedRounds: 0,
-  // Settings
   settings: { focus: 25, short: 5, long: 30, rounds: 4, autoStart: false, notif: false },
-  // Tasks
   tasks: [],
-  activeTaskId: null,       // which task the session view is showing
-  // Alarm
+  activeTaskId: null,
   alarm: { type: 'beep', customUrl: null, customName: null },
-  // Stats
   stats: {}
 };
 
@@ -1314,33 +1252,6 @@ let bufferSecsLeft = 10;
 let bufferNextMode = null;
 let activeAlarmAudio = null;
 let alarmWaitingNextMode = null;
-
-
-// ═══════════════════════════════════════════════════════════════
-// FOCUS FLOW DATABASE v1
-// Schema stored in localStorage key: 'ff_db_v1'
-// {
-//   days: {
-//     "YYYY-MM-DD": {
-//       focusPomos: number,       // completed focus rounds
-//       shortBreaks: number,      // short breaks taken
-//       longBreaks: number,       // long breaks taken
-//       focusMins: number,        // total focus minutes
-//       breakMins: number,        // total break minutes
-//       idleMins: number,         // minutes app was open but no timer running
-//       tasksDone: number         // tasks completed that day
-//     }
-//   },
-//   totals: {
-//     focusPomos: number,
-//     focusMins: number,
-//     breakMins: number,
-//     idleMins: number,
-//     tasksDone: number
-//   },
-//   createdAt: "YYYY-MM-DD"
-// }
-// ═══════════════════════════════════════════════════════════════
 
 const DB_KEY = 'ff_db_v1';
 
@@ -1367,7 +1278,6 @@ function dbDay(db, dateKey) {
   return db.days[dateKey];
 }
 
-// Called when a focus pomodoro completes
 function addFocusMinutes(mins) {
   const db = dbGet(); const d = todayKey(); const day = dbDay(db, d);
   day.focusPomos++;
@@ -1377,7 +1287,6 @@ function addFocusMinutes(mins) {
   dbSave(db);
 }
 
-// Called when a break completes
 function addBreakMinutes(type, mins) {
   const db = dbGet(); const d = todayKey(); const day = dbDay(db, d);
   if (type === 'short') day.shortBreaks++;
@@ -1387,7 +1296,6 @@ function addBreakMinutes(type, mins) {
   dbSave(db);
 }
 
-// Called when a task is marked done
 function addTaskDone() {
   const db = dbGet(); const d = todayKey(); const day = dbDay(db, d);
   day.tasksDone++;
@@ -1395,9 +1303,8 @@ function addTaskDone() {
   dbSave(db);
 }
 
-// ─── IDLE TRACKING ────────────────────────────────────────────
 let idleInterval = null;
-let idleAccSecs  = 0;   // seconds accumulated since last flush
+let idleAccSecs  = 0;
 
 function startIdleTracking() {
   if (idleInterval) return;
@@ -1413,12 +1320,11 @@ function startIdleTracking() {
         idleAccSecs -= mins * 60;
       }
     } else {
-      idleAccSecs = 0; // reset idle counter while timer runs
+      idleAccSecs = 0;
     }
   }, 1000);
 }
 
-// ─── RESET DB ──────────────────────────────────────────────────
 function confirmResetDB() {
   document.getElementById('resetModal').classList.add('open');
 }
@@ -1429,9 +1335,7 @@ function executeResetDB() {
     createdAt: todayKey()
   };
   dbSave(fresh);
-  // Also wipe the old analytics key so nothing bleeds through
   localStorage.removeItem('ff_analytics_v3');
-  // Reset legacy stats in state
   state.stats = {};
   saveStorage();
   document.getElementById('resetModal').classList.remove('open');
@@ -1441,7 +1345,6 @@ function executeResetDB() {
   showToast('✅ All data reset. Fresh start!');
 }
 
-// ─── CHART HELPERS ─────────────────────────────────────────────
 function fmtHrMin(mins) {
   const h = Math.floor(mins / 60);
   const m = mins % 60;
@@ -1449,7 +1352,6 @@ function fmtHrMin(mins) {
 }
 
 function drawDonut(canvas, slices) {
-  // slices: [{value, color, label}]
   const ctx = canvas.getContext('2d');
   const W = canvas.width, H = canvas.height;
   ctx.clearRect(0, 0, W, H);
@@ -1473,7 +1375,6 @@ function drawDonut(canvas, slices) {
     ctx.stroke();
     angle += sweep;
   });
-  // center text
   ctx.fillStyle = '#f0ede8';
   ctx.font = '700 11px JetBrains Mono, monospace';
   ctx.textAlign = 'center';
@@ -1482,7 +1383,6 @@ function drawDonut(canvas, slices) {
 }
 
 function drawStackedBars(canvas, days) {
-  // days: [{label, focus, breaks, idle}]
   const dpr = window.devicePixelRatio || 1;
   const W = canvas.parentElement ? canvas.parentElement.clientWidth : 400;
   canvas.width  = W * dpr;
@@ -1516,14 +1416,12 @@ function drawStackedBars(canvas, days) {
       ctx.fill();
     });
     ctx.globalAlpha = 1;
-    // day label
     ctx.fillStyle = '#7a7880';
     ctx.font = '500 10px JetBrains Mono, monospace';
     ctx.textAlign = 'center';
     ctx.fillText(d.label, x + barW/2, 140 - PAD_B + 12);
   });
 
-  // Y-axis labels
   ctx.fillStyle = '#7a7880';
   ctx.font = '500 9px JetBrains Mono, monospace';
   ctx.textAlign = 'right';
@@ -1534,13 +1432,11 @@ function drawStackedBars(canvas, days) {
   });
 }
 
-// ─── RENDER ANALYTICS PANEL ────────────────────────────────────
 function renderAnalyticsPanel() {
   const db = dbGet();
   const d  = todayKey();
   const today = db.days[d] || { focusPomos:0, shortBreaks:0, longBreaks:0, focusMins:0, breakMins:0, idleMins:0, tasksDone:0 };
 
-  // KPI: focus/break/idle hours
   const fEl = document.getElementById('statFocusHrs');
   const bEl = document.getElementById('statBreakHrs');
   const iEl = document.getElementById('statIdleHrs');
@@ -1548,15 +1444,12 @@ function renderAnalyticsPanel() {
   if (bEl) bEl.textContent = fmtHrMin(today.breakMins);
   if (iEl) iEl.textContent = fmtHrMin(today.idleMins);
 
-  // Tasks done (lifetime)
   const tEl = document.getElementById('taskDoneStat');
   if (tEl) tEl.textContent = db.totals.tasksDone;
 
-  // Streak
   const streakEl = document.getElementById('statStreak');
   if (streakEl) streakEl.textContent = calcStreak(db) + '🔥';
 
-  // Avg daily pomos (last 30 days with data)
   const avgEl = document.getElementById('statAvgDaily');
   if (avgEl) {
     const entries = Object.values(db.days).filter(x => x.focusPomos > 0);
@@ -1566,7 +1459,6 @@ function renderAnalyticsPanel() {
     } else avgEl.textContent = '—';
   }
 
-  // Personal best
   let pbDate='—', pbVal=0;
   Object.entries(db.days).forEach(([k,v]) => {
     if (v.focusPomos > pbVal) { pbVal=v.focusPomos; pbDate=k; }
@@ -1576,7 +1468,6 @@ function renderAnalyticsPanel() {
   if (pbDateEl) pbDateEl.textContent = pbDate !== '—' ? formatDateLabel(pbDate) : '—';
   if (pbValEl)  pbValEl.textContent  = pbVal;
 
-  // Donut chart
   const donut = document.getElementById('donutCanvas');
   if (donut) {
     const slices = [
@@ -1596,7 +1487,6 @@ function renderAnalyticsPanel() {
     }
   }
 
-  // Stacked bar chart (last 7 days)
   const stacked = document.getElementById('stackedCanvas');
   if (stacked) {
     const DAYS_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -1612,7 +1502,6 @@ function renderAnalyticsPanel() {
         idle:   rec.idleMins   || 0,
       });
     }
-    // wait for layout
     requestAnimationFrame(() => drawStackedBars(stacked, barData));
   }
 }
@@ -1637,17 +1526,18 @@ function formatDateLabel(k) {
   } catch(e) { return k; }
 }
 
-// ─── INIT ─────────────────────────────────────────────────────────────────────
 function init() {
   loadStorage();
   renderTasks();
   updateStatsUI();
   renderWeekBars();
   startIdleTracking();
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+  // ✅ FIXED: correct path for GitHub Pages subdirectory
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/Focusflow/sw.js').catch(() => {});
+  }
 }
 
-// ─── STORAGE ──────────────────────────────────────────────────────────────────
 function saveStorage() {
   try {
     localStorage.setItem('pf_state_v2', JSON.stringify({
@@ -1684,14 +1574,12 @@ function loadStorage() {
   } catch(e) {}
 }
 
-// ─── VIEW SWITCHING ───────────────────────────────────────────────────────────
 function showView(id) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
 
 function enterSession(taskId) {
-  // stop any running timer before switching tasks
   if (state.running) pauseTimer();
   state.activeTaskId = taskId;
   state.elapsed = 0;
@@ -1702,11 +1590,9 @@ function enterSession(taskId) {
   const task = state.tasks.find(t => t.id === taskId);
   if (!task) return;
 
-  // Populate session header
   document.getElementById('sessionTaskName').textContent = task.text;
   renderSessionPips(task);
 
-  // Reset mode tabs
   document.querySelectorAll('.mode-tab').forEach(t =>
     t.classList.toggle('active', t.dataset.mode === 'focus')
   );
@@ -1725,7 +1611,6 @@ function enterSession(taskId) {
 
 function leaveSession() {
   if (state.running) pauseTimer();
-  // Cancel any pending buffer countdown
   clearInterval(bufferInterval);
   document.getElementById('bufferOverlay').classList.remove('active');
   state.activeTaskId = null;
@@ -1734,7 +1619,6 @@ function leaveSession() {
   showView('dashView');
 }
 
-// ─── SESSION PIPS ─────────────────────────────────────────────────────────────
 function renderSessionPips(task) {
   const est = task.est || 1;
   const done = Math.min(task.pomos, est);
@@ -1756,7 +1640,6 @@ function refreshSessionHeader() {
   renderSessionPips(task);
 }
 
-// ─── TIMER ────────────────────────────────────────────────────────────────────
 function toggleTimer() { state.running ? pauseTimer() : startTimer(); }
 
 function startTimer() {
@@ -1766,7 +1649,7 @@ function startTimer() {
   btn.innerHTML = '⏸';
   btn.classList.add('running');
   timerInterval = setInterval(tick, 1000);
-  refreshSessionHeader(); // animate current pip
+  refreshSessionHeader();
 }
 
 function pauseTimer() {
@@ -1809,10 +1692,8 @@ function onComplete() {
     document.getElementById('alarmModal').style.display='flex';
 
   } else {
-    // break just ended → record break time
     const breakMins = state.settings[state.mode] || MODES[state.mode].def;
     addBreakMinutes(state.mode, breakMins);
-    // go back to focus
     alarmWaitingNextMode = 'focus';
     showToast('⏰ Session complete! Stop the alarm to continue.');
     sendNotif('Session Complete!', 'Stop the alarm to continue.');
@@ -1824,12 +1705,10 @@ function onComplete() {
   saveStorage();
 }
 
-// ─── BUFFER (5-second countdown between sessions) ────────────────────────────
 function startBuffer(nextMode) {
   bufferNextMode = nextMode;
   bufferSecsLeft = 10;
 
-  // Style the badge
   const badge = document.getElementById('bufferBadge');
   const label = document.getElementById('bufferLabel');
   badge.className = 'buffer-mode-badge ' + (nextMode === 'focus' ? 'focus' : nextMode === 'long' ? 'long' : 'short');
@@ -1873,7 +1752,6 @@ function skipNext() {
   onComplete();
 }
 
-
 function stopAlarm() {
   if (activeAlarmAudio instanceof Audio) {
     activeAlarmAudio.pause();
@@ -1900,10 +1778,8 @@ function stopAlarmAndContinue() {
   startBuffer(alarmWaitingNextMode);
 }
 
-// ─── MODE ─────────────────────────────────────────────────────────────────────
 function setMode(mode, autoPlay = false) {
   pauseTimer();
-  // Cancel any running buffer (user manually tapped a tab)
   if (!autoPlay) {
     clearInterval(bufferInterval);
     document.getElementById('bufferOverlay').classList.remove('active');
@@ -1927,7 +1803,6 @@ function setMode(mode, autoPlay = false) {
   if (autoPlay) startTimer();
 }
 
-// ─── DISPLAY ──────────────────────────────────────────────────────────────────
 function updateDisplay() {
   const remaining = Math.max(state.totalSecs - state.elapsed, 0);
   const m = Math.floor(remaining / 60).toString().padStart(2, '0');
@@ -1969,7 +1844,6 @@ function setDurationDirect(val) {
   saveStorage();
 }
 
-// ─── DOTS ─────────────────────────────────────────────────────────────────────
 function renderDots() {
   const wrap = document.getElementById('sessionDots');
   wrap.innerHTML = '';
@@ -1983,7 +1857,6 @@ function renderDots() {
   }
 }
 
-// ─── SETTINGS ────────────────────────────────────────────────────────────────
 function applySettings() {
   state.settings.focus  = parseInt(document.getElementById('setFocus').value)  || 25;
   state.settings.short  = parseInt(document.getElementById('setShort').value)  || 5;
@@ -2005,7 +1878,6 @@ function togglePanel(panelId, btnId) {
   const open = p.classList.toggle('open');
   b.classList.toggle('active', open);
 
-  // close the other panel
   const other = panelId === 'settingsPanel' ? 'statsSection' : 'settingsPanel';
   const otherBtn = panelId === 'settingsPanel' ? 'statsBtn' : 'settingsBtn';
   document.getElementById(other).classList.remove('open');
@@ -2018,7 +1890,6 @@ function togglePanel(panelId, btnId) {
   }
 }
 
-// ─── TASKS ────────────────────────────────────────────────────────────────────
 function addTask() {
   const inp = document.getElementById('taskInput');
   const text = inp.value.trim();
@@ -2057,7 +1928,6 @@ function renderTasks() {
     const card = document.createElement('div');
     card.className = 'task-card' + (isComplete ? ' complete-card' : '') + (done > 0 ? ' has-pomos' : '');
 
-    // pips html
     const pipsHtml = Array.from({length: est}, (_, i) =>
       `<span class="pomo-pip ${i < done ? 'filled' : ''}"></span>`
     ).join('');
@@ -2090,7 +1960,6 @@ function renderTasks() {
       </div>
     `;
 
-    // clicking the task body enters the session too
     card.querySelector('.task-card-inner').addEventListener('click', () => {
       if (!t.done) enterSession(t.id);
     });
@@ -2131,7 +2000,6 @@ function incrementTaskPomos() {
     addTaskDone();
     renderTasks();
     saveStorage();
-    // After a short delay, return to dashboard
     setTimeout(() => leaveSession(), 2500);
   }
 }
@@ -2142,7 +2010,6 @@ function adjustEst(id, delta) {
   t.est = Math.max(1, Math.min(99, (t.est || 1) + delta));
   renderTasks();
   saveStorage();
-  // If we're in session for this task, refresh the pip row
   if (state.activeTaskId === id) refreshSessionHeader();
 }
 
@@ -2150,7 +2017,6 @@ function escHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-// ─── ALARM ────────────────────────────────────────────────────────────────────
 function selectBuiltin(tone, btn) {
   state.alarm.type = tone;
   document.querySelectorAll('.builtin-btn').forEach(b => b.classList.remove('selected'));
@@ -2232,7 +2098,6 @@ function synthBeep(freqs, durs, wave = 'sine', vol = 0.4) {
   });
 }
 
-// ─── STATS ────────────────────────────────────────────────────────────────────
 function todayKey() { return new Date().toISOString().slice(0, 10); }
 
 function recordStat() {
@@ -2250,11 +2115,9 @@ function updateStatsUI() {
     total += v;
     if ((now - new Date(k)) / 86400000 < 7) week += v;
   });
-  // Quick stats row
   document.getElementById('statToday').textContent  = today;
   document.getElementById('statWeek').textContent   = week;
   document.getElementById('statTotal').textContent  = total;
-  // Full stats panel
   document.getElementById('statTodayFull').textContent = today;
   document.getElementById('statWeekFull').textContent  = week;
   document.getElementById('statTotalFull').textContent = total;
@@ -2282,7 +2145,6 @@ function renderWeekBars() {
   });
 }
 
-// ─── NOTIFICATIONS ────────────────────────────────────────────────────────────
 function toggleNotif() {
   state.settings.notif = document.getElementById('notifToggle').checked;
   if (state.settings.notif && Notification.permission === 'default') {
@@ -2302,7 +2164,6 @@ function sendNotif(title, body) {
   new Notification(title, { body, icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><text y="52" font-size="52">🍅</text></svg>' });
 }
 
-// ─── TOAST ────────────────────────────────────────────────────────────────────
 function showToast(msg) {
   const wrap = document.getElementById('toastWrap');
   const el = document.createElement('div');
@@ -2312,7 +2173,6 @@ function showToast(msg) {
   setTimeout(() => el.remove(), 3000);
 }
 
-// ─── KEYBOARD ─────────────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT') return;
   if (e.code === 'Space') { e.preventDefault(); if (state.activeTaskId) toggleTimer(); }
@@ -2320,7 +2180,6 @@ document.addEventListener('keydown', e => {
   if (e.code === 'KeyS' && state.activeTaskId) skipNext();
 });
 
-// ─── DRAG/DROP ────────────────────────────────────────────────────────────────
 const zone = document.getElementById('uploadZone');
 zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragover'); });
 zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
@@ -2333,7 +2192,6 @@ zone.addEventListener('drop', e => {
   }
 });
 
-// ─── START ────────────────────────────────────────────────────────────────────
 init();
 </script>
 </body>
