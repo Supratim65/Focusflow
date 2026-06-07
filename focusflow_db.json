@@ -1,0 +1,23 @@
+{
+  "_comment": "FocusFlow DB v1 — auto-managed by the app via localStorage key 'ff_db_v1'. This file is the schema reference only.",
+  "_schema_version": "1.0",
+  "days": {
+    "YYYY-MM-DD": {
+      "focusPomos":  0,
+      "shortBreaks": 0,
+      "longBreaks":  0,
+      "focusMins":   0,
+      "breakMins":   0,
+      "idleMins":    0,
+      "tasksDone":   0
+    }
+  },
+  "totals": {
+    "focusPomos":  0,
+    "focusMins":   0,
+    "breakMins":   0,
+    "idleMins":    0,
+    "tasksDone":   0
+  },
+  "createdAt": "YYYY-MM-DD"
+}
